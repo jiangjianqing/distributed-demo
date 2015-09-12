@@ -7,7 +7,7 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 
-.settings
+#.settings
 .metadata
 RemoteSystemsTempFiles
 META-INF/
