@@ -31,6 +31,12 @@ public class TestZookeeper {
 		ZooKeeper zk = new ZooKeeper("localhost:" + CLIENT_PORT,200, new Watcher() {
 			// 监控所有被触发的事件
 			public void process(WatchedEvent event) {
+				if(event.getPath().equals("/testRootPath") &&
+				         event.getType() == Event.EventType.NodeChildrenChanged){ 
+				            System.out.println("得到指定的通知"); 
+				             
+				            //doAction(); 
+				        } 
 				System.out.println("已经触发了" + event.getType() + "事件！");
 			}
 		});
